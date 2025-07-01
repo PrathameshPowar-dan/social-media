@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Clone</title>
+  <link rel="stylesheet" href="./src/output.css" />
+  <style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="h-full relative bg-black flex">
+  <div class="absolute bottom-0 left-0 h-16 border-t border-gray-800 bg-black w-full md:relative md:h-screen md:w-60 md:border-r">
+    <ul class="text-white flex flex-row justify-around md:flex-col h-full p-4 mr-2.5 space-y-8">
+
+      <li>
+        <img src="Images/social-icon.svg" class="logo hidden md:block mb-4 mt-4" alt="Logo" width="58px" />
+      </li>
+
+      <li>
+        <button class="flex items-center space-x-3">
+          <img src="Images/home.svg" alt="Home" class="h-6" />
+          <span class="hidden md:block">Home</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex items-center space-x-3">
+          <img src="Images/search.svg" alt="Search" class="h-6" />
+          <span class="hidden md:block">Search</span>
+        </button>
+      </li>
+
+      <li>
+        <button class="flex items-center space-x-3">
+          <img src="Images/white-heart-icon.svg" alt="Notifications" class="h-6" />
+          <span class="hidden md:block">Notifications</span>
+        </button>
+      </li>
+
+      <li>
+        <button class="flex items-center space-x-3">
+          <img src="Images/red-heart-icon.svg" alt="Profile" class="h-6" />
+          <span class="hidden md:block">Profile</span>
+        </button>
+      </li>
+
+      <li class="mt-auto mb-3">
+        <button
+          class="log-out hidden md:flex justify-center m-auto items-center w-4/5 h-10 space-x-3 text-red-400 rounded-2xl hover:bg-gray-900 hover:text-red-700">
+          <span>Log out</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main-Content -->
+  <div class="main h-screen w-full md:w-3/5  overflow-y-scroll hide-scrollbar">
+    <div class="mobile-nav-top flex items-center justify-between p-1 w-full md:hidden">
+      <img src="Images/social-icon.svg" alt="mobile-logo" width="28px">
+      <button
+        class="log-out flex justify-center items-center w-1/5 h-10 space-x-3 text-red-400 rounded-2xl hover:bg-gray-900 hover:text-red-700">
+        <span>Log out</span>
+      </button>
+    </div>
+    <div class="scroll-wrapper relative h-24 w-4/5  md:h-1/5 md:w-3/4 mx-auto">
+      <button class="left-btn hidden absolute z-10 md:flex justify-center items-center left-5 top-5/12 h-6 w-6 rounded-full bg-white">
+        <img src="Images/arrow.svg" class="rotate-180 mr-0.5" alt="arrow">
+      </button>
+
+      <div class="stories flex h-full w-full overflow-x-scroll hide-scrollbar">
+        <ul class="flex items-center gap-3.5 h-full w-full">
+         
+        </ul>
+
+      </div>
+
+      <button class="right-btn hidden absolute z-30 md:flex justify-center items-center rounded-full right-5 top-5/12 h-6 w-6 bg-white">
+        <img src="Images/arrow.svg" class="ml-0.5" alt="arrow">
+      </button>
+
+    </div>
+    <div class="feed text-white mt-4 w-4/5 md:w-3/4 m-auto">
+      
+
+    </div>
+  </div>
+  <!-- Right Sidebar -->
+  <aside class="h-screen hidden md:block w-80 text-white px-4 py-6 xl:block overflow-y-auto">
+    <!-- Logged in user -->
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center space-x-3">
+        <img src="https://pm1.aminoapps.com/6750/40d16144fb5ad60595d1cdf485971ad26f62bb0ev2_hq.jpg"
+          class="w-10 h-10 rounded-full object-cover border border-gray-700" alt="Luffy" />
+        <div>
+          <p class="text-sm font-semibold">User</p>
+          <p class="text-xs text-gray-500">Me</p>
+        </div>
+      </div>
+      <button
+        class="text-blue-500 text-xs font-semibold px-2 py-1 rounded transition-colors hover:bg-white hover:text-black">
+        Switch
+      </button>
+    </div>
+
+    <div class="mb-4 ">
+      <div class="flex justify-between items-center mb-2 text-sm text-gray-400">
+        <p>Suggested for you</p>
+        <button class="text-white text-xs font-semibold px-2 py-1 hover:text-gray-500 transition-colors rounded">
+          See All
+        </button>
+      </div>
+
+      <ul class="suggestions space-y-4 text-sm">
+        
+      </ul>
+    </div>
+
+    <footer class=" mt-6 text-xs  text-gray-500 space-y-1 leading-4">
+      <div>
+        <a href="#" class="no-underline hover:underline text-gray-500">About</a> • <a href="#"
+          class="no-underline hover:underline text-gray-500">Help</a> • <a href="#"
+          class="no-underline hover:underline text-gray-500">Press</a> •
+        <a href="#" class="no-underline hover:underline text-gray-500">API</a> • <a href="#"
+          class="no-underline hover:underline text-gray-500">Jobs</a> • <a href="#"
+          class="no-underline hover:underline text-gray-500">Privacy</a> •
+        <a href="#" class="no-underline hover:underline text-gray-500">Terms</a>
+      </div>
+      <p>© 2025 Social Media FROM Me</p>
+    </footer>
+  </aside>
+<script src="main.js"></script>
+</body>
+
+</html>
